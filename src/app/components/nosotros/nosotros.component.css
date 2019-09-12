@@ -1,0 +1,105 @@
+.letra{
+    font-size: 30px;
+}
+
+.bg-gris{
+    background-color: #F5F5F5;
+}
+
+.bg-gris-claro{
+    background-color: #f3f3f3;
+}
+
+.redondo{
+    border-radius: .9%;
+    border: transparent;
+}
+
+.sombra{
+    border-bottom: 1px solid #E9E9E9
+}
+
+.centrar{
+    align-content: center;
+}
+
+.bg-azul{
+    color: #25388D;
+}
+
+.caja{
+    width:389px;
+    height: 250px;
+
+}
+
+.bg-verde{
+    background-color: #4eb478;
+    border-radius: 100px;
+    padding: 40px;
+    height: 5px;
+    width: 10px;
+    right: 40%;
+}
+
+.verde{
+    transition: all .3s ease;
+}
+
+.verde:hover{
+    background-color: #4eb478;
+    transition: all .3s ease
+}
+
+.posicion{
+    top: 30px;
+    left:25px;
+
+}
+
+.bg-verde:hover{
+cursor: pointer;
+ position: absolute;
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow 18s ease infinite;
+-z-animation: rainbow 18s ease infinite;
+-o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+    
+
+
+.pequeno{
+    padding: 15px;
+    font-size: 12px;
+}
+
+.gris-mediano{
+     background-color: #EDEDED;
+}
+
+.fuente{
+    font-size: 45px;
+}

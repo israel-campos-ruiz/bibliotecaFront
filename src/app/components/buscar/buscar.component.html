@@ -1,0 +1,62 @@
+<div class="container-fluid bg-gris">
+
+  <div class="container mt-5 pt-5 pb-5 d-flex justify-content-end">
+    <input type="text" class="form-control w-25 redondo " placeholder="Busca tus libros favoritos" [(ngModel)]="buscar"
+      name="buscar" (keyup.enter)="buscarL(buscar)">
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <button data-target="#exampleModal"
+              data-toggle="modal"
+              type="button" 
+              class="btn btn-primary my-5 float-right">Nuevo libro</button>
+      <table class="table table-hover">
+       <thead>
+        <tr>
+          <th>#</th>
+          <th>Titulo</th>
+          <th>Autor</th>
+          <th>Idioma</th>
+          <th class="text-center">Herramientas</th>
+          
+       
+        
+        </tr>
+       </thead>
+       <tbody  *ngFor="let libro of libros |  paginate: { itemsPerPage: 5, currentPage: pageActual } let i = index">
+         <th scope="col">{{i+1}}</th>
+         <td>{{libro.editorial}}</td>
+         <td>{{libro.autor}}</td>
+         <td>{{libro.idioma}}</td>
+         <td class="text-center" >
+           <button 
+                  data-toggle="modal"
+                  data-target="#exampleModal"
+                  class="btn btn-success text-white m-2 " (click)="consultarLibro(libro._id)" >Consultar</button>
+         
+         
+          <button 
+                 data-toggle="modal"
+                 data-target="#exampleModal"
+                 class="btn btn-info text-white m-2 "  >Actualizar</button>
+        
+         
+            <button class="btn btn-danger m-2" (click) ="borrarLibro(libro._id, i)">Borrar</button>
+          </td>
+        
+       </tbody>
+      </table>
+      <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
+    </div>
+
+  </div>
+</div>
+
+<app-modal></app-modal>
+
+<!-- <app-footer></app-footer> -->

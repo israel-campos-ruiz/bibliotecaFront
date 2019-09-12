@@ -1,0 +1,137 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel">NEW BOOK </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup] = "userForm" id="userForm" (submit)="ngSubmit(userForm.value)">
+          <!-- <input
+               type="text" 
+               id="bookId" 
+               name="bookId" 
+               class="form-control"
+               formControlName="_id"
+             
+               > -->
+         <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="">Título</label>
+                <input 
+                      type="text" 
+                      id="editorial" 
+                      name="editorial" 
+                      class="form-control"
+                      formControlName="editorial"
+                     
+                      >
+              </div>
+              
+                  <div class="form-group col-md-6">
+                    <label for="">Idioma</label>
+                    <select 
+                            name="idioma" 
+                            id="idioma" 
+                            formControlName="idioma"
+                            class="form-control">
+                      <option value="Español">Español</option>
+                      <option value="Ingles">Inglés</option>
+
+    
+                    </select>
+                  </div>
+                 
+         </div>
+           
+
+            <div class="form-row py-2">
+              <div class="form-group col-md-6">
+                <label for="autor">Autor</label>
+                <input 
+                      class="form-control" 
+                      type="text" 
+                      id="autor" 
+                      name="autor" 
+                      placeholder="Autor"
+                      formControlName="autor"
+                      
+                      
+                      >
+
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="autor">Editorial</label>
+                <input 
+                      class="form-control" 
+                      type="text" 
+                      id="editorial" 
+                      name="editorial" 
+                      placeholder="Editorial"
+                      formControlName="editorial"
+                      
+                      >
+  
+              </div>
+            </div>
+            
+             
+              <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="autor">Imagen</label>
+                    <input 
+                          class="form-control " 
+                          type="file" 
+                          id="img" 
+                          name="img" 
+                          placeholder="Añadir Imagen"
+                          #img
+                          formControlName="img" 
+                          (change)="onFoto($event)"
+                        
+                          >
+                         
+
+                  </div>
+                  <div class="form-group col-md-6">
+                      <label for="autor">Link</label>
+                      <input 
+                            class="form-control" 
+                            type="text" 
+                            id="link" 
+                            name="link" 
+                            placeholder="Añadir link"
+                            formControlName="link"
+                          
+                            >
+      
+                    </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="descripcion">Descripcion</label>
+                  <textarea 
+                            class="form-control" 
+                            name="descripcion" 
+                            id="descripcion" 
+                            cols="50" 
+                            rows="4"
+                            formControlName="descripcion"
+                           
+                            ></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary float-right">Guardar Libro</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+               
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

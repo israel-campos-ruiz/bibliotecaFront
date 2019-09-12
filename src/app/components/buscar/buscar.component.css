@@ -1,0 +1,20 @@
+.bg-gris{
+    background-color: #f5f5f5;
+}
+
+.redondo{
+    border-radius: 5px;
+}
+
+app-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+.container-fluid{
+    z-index: 1000;
+}
+

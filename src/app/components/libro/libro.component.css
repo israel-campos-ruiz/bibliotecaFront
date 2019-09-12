@@ -1,0 +1,24 @@
+.altura{
+    height:100px;
+    width: 100px;
+    object-fit: cover;
+    margin-left: 55%;
+    border-radius: 50%;
+}
+
+.posicionar{
+    top: 77%;
+    z-index:1000;
+   
+}
+
+@media screen and (max-width: 580px){
+        .altura{
+            margin-left: 40%;
+        
+        }
+
+        .posicionar{
+            top: 85%;
+        }
+}

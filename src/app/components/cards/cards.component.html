@@ -1,0 +1,24 @@
+<h2 class="text-center py-5 my-5 text-azul">Libros</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class = "row">
+          <div class="col-lg-4 col-md-6 col-sm-12 hover pb-4" *ngFor="let libro of libros let i = index ">  <!-- aqui va el ngfor -->
+           <div *ngIf="i < 6">
+            <div class="card h-100">
+              <div class="card-header bg-white ">
+                <div class="h6 card-title text-center">{{libro.editorial}}</div>
+                <p class="text-center">{{libro.autor}}</p>
+              </div>
+              <img class="card-img-top img-fluid altura" [src]=" libro | book" alt="Card image cap">
+            <a [routerLink]="['/libro', libro._id]" >
+                <div  class="card-footer text-center">ver más...</div>
+            </a>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
